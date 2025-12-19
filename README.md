@@ -18,6 +18,40 @@ Notre objectif est de numériser cette extension pour permettre une expérience 
 4. Tests et feedbacks sur la version numérique.
 5. Lancement de la version numérique pour les équipes distantes.
 
+## Compilation
+
+Ce projet contient trois fichiers LaTeX principaux :
+- `notice.tex` : Notice du jeu
+- `scoring.tex` : Feuille de score
+- `cards.tex` : Cartes du jeu
+
+### Prérequis
+
+- `pdflatex` (LaTeX)
+- `just` (gestionnaire de commandes)
+
+### Compilation avec Just
+
+Pour compiler tous les fichiers PDF :
+```bash
+just
+```
+
+Ou pour compiler un fichier spécifique :
+```bash
+just notice    # Compile uniquement notice.tex
+just scoring   # Compile uniquement scoring.tex
+just cards     # Compile uniquement cards.tex
+```
+
+### Autres commandes utiles
+
+```bash
+just build     # Compile tout puis nettoie les fichiers auxiliaires
+just clean     # Supprime les fichiers auxiliaires (.aux, .log, etc.)
+just clean-all # Supprime tout, y compris les PDF
+```
+
 ## Comment Contribuer
 
 Nous apprécions toutes les contributions pour améliorer cette extension. Si vous avez des suggestions ou des commentaires, n'hésitez pas à ouvrir une issue ou à soumettre une pull request.
